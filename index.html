@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faq</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+   
+</head>
+<body>
+    <style>
+        body{
+            background:rgb(255, 234, 237);
+        }
+    </style>
+    <div class="top-pic"></div>
+    <div class="top-pic-mob"></div>
+    <div class="faq-box">
+        <div class="title">FAQ's</div>
+        <div class="q">question number 1</div>
+        <img src="images/icon-plus.svg">
+        <div class="a">answer number 1</div>
+        <hr>
+        <div class="q">question number 2</div>
+        <img src="images/icon-plus.svg">
+        <div class="a">answer number 2</div>
+        <hr>
+        <div class="q">question number 3</div>
+        <img src="images/icon-plus.svg">
+        <div class="a">answer number 3</div>
+        <hr>
+        <div class="q">question number 4</div>
+        <img src="images/icon-plus.svg">
+        <div class="a">answer number 4</div>
+        <hr>
+    </div>
+   
+   <script>
+    var action ='click';
+    var speed = 500;
+    var speed2=50;
+   $(document).ready(function(){
+        $('.faq-box img').on(action,function(){
+            $(this).siblings('img').attr('src',"images/icon-plus.svg");
+            $(this).next().slideToggle(speed2).siblings('.a').slideUp();
+            $(this).attr('src',"images/icon-minus.svg");
+        });
+   });
+   </script> 
+
+</body>
+</html>
